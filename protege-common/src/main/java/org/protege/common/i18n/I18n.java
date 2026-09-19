@@ -4,16 +4,16 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class I18n {
-    private static final String BUNDLE_NAME = "i18n.Message";
+    private static final String BUNDLE_NAME = "i18n.Messages";
 
     // 初始化加载资源束
     private static ResourceBundle bundle = ResourceBundle.getBundle(BUNDLE_NAME, Locale.CHINA);
 
-    private static String get(String key, Object... args) {
+    public static String get(String key, Object... args) {
         try {
             String value = bundle.getString(key);
             if (args.length > 0) {
-                return java.text.MessageFormat.format(value, arge);
+                return java.text.MessageFormat.format(value, args);
             }
             return value;
         } catch (Exception e) {

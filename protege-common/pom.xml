@@ -33,8 +33,17 @@
 	</dependencies>
 	
 	<build>
-		<plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*</include>
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+		</resources>
 
+		<plugins>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
@@ -43,6 +52,8 @@
 						<Bundle-Activator>org.protege.common.Activator</Bundle-Activator>
 						<Bundle-ClassPath>.</Bundle-ClassPath>
 						<Bundle-SymbolicName>org.protege.common</Bundle-SymbolicName>
+						<!-- 加上这一行，把 src/main/resources 下的所有资源打包进 Bundle -->
+            			<Include-Resource>{maven-resources}</Include-Resource>
 						<Export-Package>
 							org.protege.common.*;version=${project.version}
 						</Export-Package>

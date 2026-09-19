@@ -72,8 +72,8 @@
 	</dependencies>
 	
 	<build>
-		<plugins>
 
+		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
@@ -81,7 +81,6 @@
 					<target>21</target>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<executions>
@@ -107,7 +106,6 @@
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
 	</build>
 

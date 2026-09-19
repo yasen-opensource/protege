@@ -65,6 +65,7 @@ public class ToldOWLClassHierarchyViewComponent extends AbstractOWLClassHierarch
 
         AbstractOWLTreeAction<OWLClass> addSubClassAction =
                 // new AbstractOWLTreeAction<OWLClass>("Add subclass",
+                // new AbstractOWLTreeAction<OWLClass>("添加子类",
                 new AbstractOWLTreeAction<OWLClass>(I18n.get("action.add.subclass"),
                                                     ADD_SUB_ICON,
                                                     getTree().getSelectionModel()) {

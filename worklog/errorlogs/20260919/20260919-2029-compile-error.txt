@@ -1,0 +1,391 @@
+PS D:\github\protege> mvn clean install -DskipTests=true
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] protege-parent                                                     [pom]
+[INFO] protege-launcher                                                   [jar]
+[INFO] protege-common                                                  [bundle]
+[INFO] protege-editor-core                                             [bundle]
+[INFO] protege-editor-owl                                              [bundle]
+[INFO] protege-desktop                                                    [jar]
+[INFO] 
+[INFO] ----------------< edu.stanford.protege:protege-parent >-----------------
+[INFO] Building protege-parent 5.6.10.1                                   [1/6]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ protege-parent ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven) @ protege-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ protege-parent ---
+[INFO] Installing D:\github\protege\pom.xml to C:\Users\v0cn037\.m2\repository\edu\stanford\protege\protege-parent\5.6.10.1\protege-parent-5.6.10.1.pom
+[INFO] 
+[INFO] ---------------< edu.stanford.protege:protege-launcher >----------------
+[INFO] Building protege-launcher 5.6.10.1                                 [2/6]
+[INFO]   from protege-launcher\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ protege-launcher ---
+[INFO] Deleting D:\github\protege\protege-launcher\target
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven) @ protege-launcher ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ protege-launcher ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ protege-launcher ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 9 source files with javac [forked debug release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ protege-launcher ---
+[INFO] skip non existing resourceDirectory D:\github\protege\protege-launcher\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ protege-launcher ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [forked debug release 21] to target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[25,12] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[31,12] error: cannot find symbol
+  symbol:   class SymbolicName
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[27,12] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[30,12] error: cannot find symbol
+  symbol:   class SymbolicName
+  location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[35,4] error: cannot find symbol
+  symbol:   class BundleSearchPath
+  location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\SymbolicName_TestCase.java:[15,12] error: cannot find symbol
+  symbol:   class SymbolicName
+  location: class SymbolicName_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[43,25] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[49,12] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[59,12] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[69,12] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[89,38] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[94,42] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[99,42] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[99,70] error: cannot find symbol
+  symbol:   class SymbolicName
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[104,42] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[109,49] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[121,8] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[121,41] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[129,8] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[129,41] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[137,8] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[137,41] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[145,8] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[145,41] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[153,8] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[153,41] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[162,8] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[162,41] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[171,8] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[171,41] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[179,8] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[179,41] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[180,8] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[180,41] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[188,8] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[188,41] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[189,8] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[189,41] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[39,31] error: cannot find symbol
+  symbol:   class BundleSearchPath
+  location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[44,27] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[45,27] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[50,12] error: cannot find symbol
+  symbol:   class SymbolicName
+  location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[50,26] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[58,12] error: cannot find symbol
+  symbol:   class SymbolicName
+  location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[58,26] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[66,12] error: cannot find symbol
+  symbol:   class SymbolicName
+  location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[66,26] error: cannot find symbol
+  symbol:   class BundleInfo
+  location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\SymbolicName_TestCase.java:[22,27] error: cannot find symbol
+  symbol:   class SymbolicName
+  location: class SymbolicName_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\SymbolicName_TestCase.java:[27,12] error: cannot find symbol
+  symbol:   class SymbolicName
+  location: class SymbolicName_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\SymbolicName_TestCase.java:[47,40] error: cannot find symbol
+  symbol:   class SymbolicName
+  location: class SymbolicName_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\SymbolicName_TestCase.java:[52,53] error: cannot find symbol
+  symbol:   class SymbolicName
+  location: class SymbolicName_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\SymbolicName_TestCase.java:[57,51] error: cannot find symbol
+  symbol:   class SymbolicName
+  location: class SymbolicName_TestCase
+[INFO] 52 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for protege-parent 5.6.10.1:
+[INFO] 
+[INFO] protege-parent ..................................... SUCCESS [  0.662 s]
+[INFO] protege-launcher ................................... FAILURE [  6.198 s]
+[INFO] protege-common ..................................... SKIPPED
+[INFO] protege-editor-core ................................ SKIPPED
+[INFO] protege-editor-owl ................................. SKIPPED
+[INFO] protege-desktop .................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.073 s
+[INFO] Finished at: 2026-09-19T20:25:08+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.0:testCompile (default-testCompile) on project protege-launcher: Compilation failure: Compilation failure: 
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[25,12] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[31,12] error: cannot find symbol
+[ERROR]   symbol:   class SymbolicName
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[27,12] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[30,12] error: cannot find symbol
+[ERROR]   symbol:   class SymbolicName
+[ERROR]   location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[35,4] error: cannot find symbol
+[ERROR]   symbol:   class BundleSearchPath
+[ERROR]   location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\SymbolicName_TestCase.java:[15,12] error: cannot find symbol
+[ERROR]   symbol:   class SymbolicName
+[ERROR]   location: class SymbolicName_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[43,25] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[49,12] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[59,12] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[69,12] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[89,38] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[94,42] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[99,42] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[99,70] error: cannot find symbol
+[ERROR]   symbol:   class SymbolicName
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[104,42] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[109,49] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[121,8] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[121,41] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[129,8] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[129,41] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[137,8] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[137,41] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[145,8] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[145,41] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[153,8] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[153,41] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[162,8] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[162,41] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[171,8] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[171,41] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[179,8] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[179,41] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[180,8] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[180,41] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[188,8] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[188,41] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[189,8] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleInfo_TestCase.java:[189,41] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleInfo_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[39,31] error: cannot find symbol
+[ERROR]   symbol:   class BundleSearchPath
+[ERROR]   location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[44,27] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[45,27] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[50,12] error: cannot find symbol
+[ERROR]   symbol:   class SymbolicName
+[ERROR]   location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[50,26] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[58,12] error: cannot find symbol
+[ERROR]   symbol:   class SymbolicName
+[ERROR]   location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[58,26] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[66,12] error: cannot find symbol
+[ERROR]   symbol:   class SymbolicName
+[ERROR]   location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\BundleSearchPath_TestCase.java:[66,26] error: cannot find symbol
+[ERROR]   symbol:   class BundleInfo
+[ERROR]   location: class BundleSearchPath_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\SymbolicName_TestCase.java:[22,27] error: cannot find symbol
+[ERROR]   symbol:   class SymbolicName
+[ERROR]   location: class SymbolicName_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\SymbolicName_TestCase.java:[27,12] error: cannot find symbol
+[ERROR]   symbol:   class SymbolicName
+[ERROR]   location: class SymbolicName_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\SymbolicName_TestCase.java:[47,40] error: cannot find symbol
+[ERROR]   symbol:   class SymbolicName
+[ERROR]   location: class SymbolicName_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\SymbolicName_TestCase.java:[52,53] error: cannot find symbol
+[ERROR]   symbol:   class SymbolicName
+[ERROR]   location: class SymbolicName_TestCase
+[ERROR] D:\github\protege\protege-launcher\src\test\java\org\protege\osgi\framework\SymbolicName_TestCase.java:[57,51] error: cannot find symbol
+[ERROR]   symbol:   class SymbolicName
+[ERROR]   location: class SymbolicName_TestCase
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :protege-launcher
