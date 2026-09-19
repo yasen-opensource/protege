@@ -1,75 +1,154 @@
-# Protégé Desktop (汉化与国际化项目 / Localization & Internationalization Project)
+# Protégé 汉化与多语言贡献指南 / Protégé Localization & Multilingual Contribution Guide / Guide de Contribution à la Localisation de Protégé
 
-> **🇨🇳 欢迎全球社区的有志之士共同参与！** 
-> 请参阅我们的详细贡献指南：[👉 国际化与汉化贡献指南 (Localization Contribution Guide)](docs/localization_contribution_guide.md) 以了解如何通过 Pull Request 贡献你的本地化语言包。
-> 
-> **🇬🇧 Welcome passionate contributors from the global community!** 
-> Please refer to our detailed contribution guide: [👉 Localization Contribution Guide](docs/localization_contribution_guide.md) to learn how to contribute your localization language pack via Pull Request.
-> 
-> **🇫🇷 Bienvenue aux contributeurs passionnés de la communauté mondiale !** 
-> Veuillez consulter notre guide de contribution détaillé : [👉 Guide de Contribution à la Localisation](docs/localization_contribution_guide.md) pour savoir comment contribuer à votre pack de langue via une Pull Request.
+[中文](#中文版本) | [English](#english-version) | [Français](#version-française)
 
 ---
 
-## 🇨🇳 中文汉化计划 (Chinese Localization)
+## 中文版本
 
-本项目分支正致力于开展 **Protégé Desktop 的全面国际化与中文汉化** 工作，方便全球华语开发者和本体工程学习者使用。
+欢迎来到 Protégé 国际化（多语言）开源贡献指南！本文档旨在为全球有志于参与 Protégé 多语言支持（如中文、法语等）的朋友提供清晰、标准的操作流程。
 
-### 📌 汉化路线图
-1. **核心模块划分**：
-   - `Protégé-common`：集中维护多语言字典（如 `Messages_zh_CN.properties`, `Messages_fr_FR.properties` 等）。
-   - 各功能插件模块：通过底层公共类与类加载器统一加载。
-2. **实施方案**：
-   - 采用标准 Java 国际化 (`ResourceBundle` / `.properties`) 属性文件与动态 Locale 选择机制。
-   - 确保在 Maven 编译打包及 Swing 运行时中完美支持多国语言字符。
+### 1. 多语言架构与 Locale 选择机制
+
+在 Protégé 的 OSGi 模块化架构中，国际化（i18n）资源统一在 **`protege-common`** 模块中集中管理。
+
+* **核心优势**：`protege-common` 是底层公共依赖，所有上层功能插件均可安全地共享和加载该模块中的资源。
+* **Locale 选择机制**：Java 的 `ResourceBundle` 根据当前的运行 `Locale` 自动匹配对应的后缀文件。
+  * 默认/英文：`Messages.properties`
+  * 中文（简体）：`Messages_zh_CN.properties`
+  * 法语：`Messages_fr_FR.properties`
+
+* **核心资源路径**：
+  * `protege-common/src/main/resources/i18n/Messages.properties` (Default / English)
+  * `protege-common/src/main/resources/i18n/Messages_zh_CN.properties` (Chinese)
+  * `protege-common/src/main/resources/i18n/Messages_fr_FR.properties` (French)
+
+### 2. 代码层面的适配方法
+
+在各功能模块的代码中，如需对 UI 元素进行国际化，请统一使用 `I18n.get()` 方法：
+
+```java
+// 通过 I18n 动态获取对应语言环境的文本
+AbstractOWLTreeAction<OWLClass> addSubClassAction = new AbstractOWLTreeAction<OWLClass>(I18n.get("action.add.subclass"), ...);
+```
+
+### 3. 在属性文件中添加多语言词条
+
+根据您想要贡献的语言，修改对应的 `.properties` 文件：
+
+* **中文 (`Messages_zh_CN.properties`)**：
+  ```properties
+  action.add.subclass = 添加子类
+  ```
+* **法语 (`Messages_fr_FR.properties`)**：
+  ```properties
+  action.add.subclass = Ajouter une sous-classe
+  ```
+
+### 4. 编译、打包与运行调试指南
+
+#### 4.1 执行 Maven 全量编译安装
+```powershell
+mvn clean install -DskipTests=true
+```
+
+#### 4.2 指定 Locale 运行参数
+在启动或 IDE 运行配置（VM options）中，通过 JVM 参数指定您要测试的目标语言环境：
+* **测试中文环境**：`-Duser.language=zh -Duser.region=CN`
+* **测试法语环境**：`-Duser.language=fr -Duser.region=FR`
+
+### 5. 提交 Pull Request 贡献指南
+
+1. **Fork 本仓库** 并创建您的特性分支。
+2. 提交对 `protege-common` 中相应 `Messages_*.properties` 文件的修改。
+3. 发起 **Pull Request**，并在描述中附上对应语言的 UI 运行截图。
 
 ---
 
-## 🇬🇧 English Localization & Internationalization Plan
+## English Version
 
-This project branch is dedicated to expanding **Protégé Desktop with comprehensive internationalization and localization (i18n)** support, making it easier for global developers and ontology engineers to use in their native languages.
+Welcome to the Protégé internationalization (multilingual) contribution guide! This guide outlines the standard workflow for contributing translations (such as Chinese, French, etc.) to the Protégé desktop application.
 
-### 📌 Localization Roadmap
-1. **Core Module Architecture**:
-   - `Protégé-common`: Centrally manages multi-language properties files (e.g., `Messages_zh_CN.properties`, `Messages_fr_FR.properties`).
-   - Feature plugins load resources dynamically via shared underlying loaders.
-2. **Implementation**:
-   - Uses standard Java Internationalization (`ResourceBundle` / `.properties`) with dynamic Locale selection.
+### 1. Multilingual Architecture & Locale Selection Mechanism
+
+Internationalization (i18n) resources are centralized within the **`protege-common`** module.
+
+* **Locale Selection Mechanism:** Java's `ResourceBundle` automatically matches resource files based on the active runtime `Locale`:
+  * Default / English: `Messages.properties`
+  * Chinese (Simplified): `Messages_zh_CN.properties`
+  * French: `Messages_fr_FR.properties`
+
+* **Resource File Paths:**
+  * `protege-common/src/main/resources/i18n/Messages.properties`
+  * `protege-common/src/main/resources/i18n/Messages_zh_CN.properties`
+  * `protege-common/src/main/resources/i18n/Messages_fr_FR.properties`
+
+### 2. Code-Level Implementation
+
+Use the `I18n.get()` utility for dynamic string lookup:
+
+```java
+AbstractOWLTreeAction<OWLClass> addSubClassAction = new AbstractOWLTreeAction<OWLClass>(I18n.get("action.add.subclass"), ...);
+```
+
+### 3. Adding Multilingual Entries
+
+* **French (`Messages_fr_FR.properties`)**:
+  ```properties
+  action.add.subclass = Ajouter une sous-classe
+  ```
+
+### 4. Build, Package & Testing with Locales
+
+#### 4.1 Maven Build
+```powershell
+mvn clean install -DskipTests=true
+```
+
+#### 4.2 Setting Runtime Locale via JVM Arguments
+* For Chinese: `-Duser.language=zh -Duser.region=CN`
+* For French: `-Duser.language=fr -Duser.region=FR`
+
+### 5. Submitting a Pull Request
+Submit your PR with the updated `.properties` files and include verification screenshots.
 
 ---
 
-## 🇫🇷 Plan de Localisation et d'Internationalisation (Français)
+## Version Française
 
-Cette branche du projet se consacre à l'expansion de **Protégé Desktop avec un support complet d'internationalisation et de localisation (i18n)**, facilitant son utilisation par les développeurs et ingénieurs ontologiques du monde entier dans leur langue maternelle.
+Bienvenue dans le guide de contribution à l'internationalisation (multilingue) de Protégé ! Ce guide décrit le flux de travail standard pour contribuer aux traductions (telles que le chinois, le français, etc.).
 
-### 📌 Feuille de Route de Localisation
-1. **Architecture du Module Central**:
-   - `Protégé-common`: Gère de manière centralisée les dictionnaires multilingues.
-2. **Mise en Œuvre**:
-   - Utilise l'internationalisation standard de Java (`ResourceBundle`) avec sélection dynamique de la Locale.
+### 1. Architecture Multilingue & Mécanisme de Sélection de la Locale
 
----
+Les ressources i18n sont centralisées dans le module **`protege-common`**.
 
-Last updated at 2026-09-19
+* **Mécanisme de sélection :** Le `ResourceBundle` de Java charge automatiquement le fichier approprié en fonction de la `Locale` active :
+  * Par défaut / Anglais : `Messages.properties`
+  * Chinois : `Messages_zh_CN.properties`
+  * Français : `Messages_fr_FR.properties`
 
----
+### 2. Utilisation dans le Code
 
-Below is the original README:
+```java
+AbstractOWLTreeAction<OWLClass> addSubClassAction = new AbstractOWLTreeAction<OWLClass>(I18n.get("action.add.subclass"), ...);
+```
 
-# Protégé Desktop
+### 3. Ajout de Traductions
 
-[Protégé](https://Protégé.stanford.edu) is a free, open-source ontology editor that supports the latest [OWL 2.0 standard](http://www.w3.org/TR/owl2-overview/). Protégé has a pluggable architecture, and many [plugins](https://Protégéwiki.stanford.edu/wiki/Protégé_Plugin_Library) for different functionalities are available.
+* **Français (`Messages_fr_FR.properties`)** :
+  ```properties
+  action.add.subclass = Ajouter une sous-classe
+  ```
 
-To read more about **Protégé's features**, please visit the Protégé [home page](https://Protégé.stanford.edu).
+### 4. Compilation et Test avec la Locale
 
-The latest version of Protégé can be [downloaded](https://Protégé.stanford.edu/software.php#desktop-Protégé) from the Protégé website, or from [github](https://github.com/Protégéproject/Protégé-distribution/releases).
+#### 4.1 Compilation Maven
+```powershell
+mvn clean install -DskipTests=true
+```
 
-If you would like to contribute to the Protégé Project please see our [contributing guide](https://github.com/Protégéproject/Protégé/blob/master/CONTRIBUTING.md)
+#### 4.2 Configuration de la Locale via les arguments JVM
+* Pour le français : `-Duser.language=fr -Duser.region=FR`
 
-The [Developer Documentation](https://github.com/Protégéproject/Protégé/wiki/Developer-Documentation) may be found on the wiki.
-
-**Looking for support?** Please ask questions on the [Protégé-user](https://Protégé.stanford.edu/support.php) or [Protégé-dev](https://Protégé.stanford.edu/support.php) mailing lists. If you found a bug or would like to request a feature, you may also use [this issue tracker](https://github.com/Protégéproject/Protégé/issues).
-
-Protégé is released under the [BSD 2-clause license](https://raw.githubusercontent.com/Protégéproject/Protégé/master/license.txt).
-
-Instructions for [building from source](https://github.com/Protégéproject/Protégé/wiki/Building-from-Source) are available on the the wiki.
+### 5. Soumission d'une Pull Request
+Soumettez votre PR avec les fichiers de propriétés mis à jour et des captures d'écran.
