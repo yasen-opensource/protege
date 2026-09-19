@@ -1,13 +1,13 @@
 # Protégé Desktop (汉化与国际化项目 / Localization & Internationalization Project)
 
 > **🇨🇳 欢迎全球社区的有志之士共同参与！** 
-> 请参阅我们的详细贡献指南：[👉 国际化与汉化贡献指南 (Localization Contribution Guide)](docs/localization_contribution_guide.md) 以了解如何通过 Pull Request 贡献你的本地化语言包。
+> 请参阅我们的详细贡献指南：[👉 国际化与汉化贡献指南 (Localization Contribution Guide)](docs/localization_contribution_guide.md/#中文版本) 以了解如何通过 Pull Request 贡献你的本地化语言包。
 > 
 > **🇬🇧 Welcome passionate contributors from the global community!** 
-> Please refer to our detailed contribution guide: [👉 Localization Contribution Guide](docs/localization_contribution_guide.md) to learn how to contribute your localization language pack via Pull Request.
+> Please refer to our detailed contribution guide: [👉 Localization Contribution Guide](docs/localization_contribution_guide.md/#english-version) to learn how to contribute your localization language pack via Pull Request.
 > 
 > **🇫🇷 Bienvenue aux contributeurs passionnés de la communauté mondiale !** 
-> Veuillez consulter notre guide de contribution détaillé : [👉 Guide de Contribution à la Localisation](docs/localization_contribution_guide.md) pour savoir comment contribuer à votre pack de langue via une Pull Request.
+> Veuillez consulter notre guide de contribution détaillé : [👉 Guide de Contribution à la Localisation](docs/localization_contribution_guide.md/#version-française) pour savoir comment contribuer à votre pack de langue via une Pull Request.
 
 ---
 
