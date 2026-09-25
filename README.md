@@ -65,6 +65,8 @@ Cette branche du projet se consacre à l'expansion de **Protégé Desktop avec u
 | **兼容性** | 可与其他官方插件共存，升级 Protégé 不丢翻译 | 仅兼容当时的 5.0 beta | 换机/升级后通常失效 |
 | **社区归属** | 开放贡献（见 [贡献指南](docs/localization_contribution_guide.md)），目标是进入官方上游 | 团队项目，不接受外部贡献 | 无社区 |
 
+*-- 对比信息最后核验于 2026-09-25*
+
 ### 💡 一句话选择建议
 
 - 想要**持续更新、可审计、能回馈上游**的中文体验 → 用本仓库的翻译资源包；
