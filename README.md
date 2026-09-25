@@ -1,5 +1,7 @@
 # Protégé Desktop (汉化与国际化项目 / Localization & Internationalization Project)
 
+> 📋 [参与 2 分钟用户调研](https://github.com/yasen-opensource/protege/discussions/X) · 你的反馈决定翻译优先级
+
 > **🇨🇳 欢迎全球社区的有志之士共同参与！** 
 > 请参阅我们的详细贡献指南：[👉 国际化与汉化贡献指南 (Localization Contribution Guide)](docs/localization_contribution_guide.md/#中文版本) 以了解如何通过 Pull Request 贡献你的本地化语言包。
 > 
